@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import Header from './Header';
 
 const Recipeentry = () => {
-    var [title,settitle]=useState("")
+    var [title,settitle]=useState("")   
+    var [category,setcategory]=useState("");
     var [description,setdescription]=useState("");
     var [prepare,setprepare]=useState("")
     const subData=()=>{
-        const data={"title":title,"description":description,"prepare":prepare}
+        const data={"title":title,"category":setcategory,"description":description,"prepare":prepare}
         console.log(data)
     }
   return (
@@ -22,7 +23,7 @@ const Recipeentry = () => {
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <div className="dropdown-center">
-                                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button className="btn btn-secondary dropdown-toggle" onClick={(e)=>{settitle(e.target.value)}} type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
                                 Category 
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownCenterBtn">
