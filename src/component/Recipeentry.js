@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Header from './Header';
 
 const Recipeentry = () => {
     var [title,settitle]=useState("")
@@ -10,6 +11,7 @@ const Recipeentry = () => {
     }
   return (
     <div>
+        <Header/>
         <div className="container">
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -21,17 +23,17 @@ const Recipeentry = () => {
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <div className="dropdown-center">
                                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
-                                Centered dropdown
+                                Category 
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownCenterBtn">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Action two</a></li>
+                                <li><a className="dropdown-item" href="#">Veg</a></li>
+                                <li><a className="dropdown-item" href="#">Non-Veg</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <label for="" className="form-label">Description</label>
-                            <textarea onChange={(e)=>{setdescription(e.target.value)}} name="description" id="" cols="15" rows="10" class="for -control"></textarea>
+                            <textarea onChange={(e)=>{setdescription(e.target.value)}} name="description" id="" cols="15" rows="10" class="form-control"></textarea>
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <label for="" className="form-label">Prepared By</label>
