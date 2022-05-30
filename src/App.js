@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import Recipeentry from './component/Recipeentry';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Search from './component/Search';
+import View from './component/View';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path='/'exact element={<Recipeentry/>}/>
           <Route path='/search' exact element={<Search/>}/>
-          <Route path='/view' exact element={<Viewall/>}/>
+          <Route path='/view' exact element={<View/>}/>
         </Routes>
       </BrowserRouter>
     </>
